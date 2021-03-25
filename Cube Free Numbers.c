@@ -18,7 +18,7 @@ int main()
     int cf[100000]= {0};
     cf[0]=1;
     k=1;
-    for(i=2;i<1000;i++)
+    for(i=2;i<n*2;i++)
     {
         c=cube(i,n);
         if(c==1)
@@ -30,7 +30,7 @@ int main()
             k++;
         }
     }
-     j=1;
+    j=1;
     for(i=0;i<n;i++)
     {
         if(n==cf[i])
