@@ -44,23 +44,33 @@ int cube(int m)
 }
 int main()
 {
-    int i,j,k,n,c;
+    int i,j,k,n,c,t,ans=1;
     scanf("%d",&n);
-    int cf[100000]={0};
+    int cf[100000]= {0};
     cf[0]=1;
     k=1;
-    for(i=2; i<n*n; i++)
+    t=cube(n);
+    if(c==2)
     {
-        c=cube(i);
-        if(c==1)
+        for(i=2; i<n*n; i++)
         {
-        }
-        else if(c==2)
-        {
-            cf[k]=i;
-            k++;
+            c=cube(i);
+            if(c==1)
+            {
+            }
+            else if(c==2)
+            {
+                ans++;
+                if(n==i)
+                {
+                    printf("%d",ans);
+                }
+            }
         }
     }
-    printf("%d ",cf[n-1]);
+    else if(t==1)
+    {
+        printf("Not Cube Free");
+    }
     return 0;
 }
