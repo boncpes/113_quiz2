@@ -37,6 +37,7 @@ int main()
         {
             printf("%d",i+1);
             j=2;
+            break;
         }
     }
     if(j==1)
